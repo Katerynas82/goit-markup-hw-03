@@ -15,9 +15,10 @@
   --hero-backround: #2e2f42;
   --button-primary: #e7e9fc;
   --button-hover-focus: #404bbf;
-  --button-text-portfolio: #4d5ae5;
+  --button-text-portfolio: #4D5AE5; 
   --curent-color: #31d0aa;
   --border-button: #e7e9fc;
+  --btn-hover: #9747FF;
 }
 .container {
   max-width: 1158px;
@@ -49,6 +50,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -62,6 +64,7 @@ body {
   align-items: baseline;
   justify-content: space-between;
   border-bottom: 1px solid var(--border-button);
+  padding: 24px 0 24px;
 }
 
 /* логотип */
@@ -83,10 +86,9 @@ body {
 .navigation {
   display: flex;
   padding-right: 0;
-  height: 72px;
-  margin-top: 12px;
   justify-content: start;
 }
+
 .site-nav {
   display: flex;
   justify-content: center;
@@ -102,16 +104,18 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-decoration: none;
-}
+  }
 
 .site-nav .item:not(:last-child) {
   margin-right: 40px;
 }
+
 .link:hover,
 .link:focus,
 .link.current {
   color: var(--focus-hover-color);
 }
+
 /* ul адреса */
 .adr-items {
   display: flex;
@@ -161,8 +165,8 @@ body {
   color: var(--hero-text-color);
   display: flex;
   justify-content: center;
-  padding: 0 316px 0 316px;
-}
+  text-align: center;
+  }
 
 /*кнопка головної сторінки*/
 .hero-button-item {
@@ -172,39 +176,33 @@ body {
   font-size: 16px;
   line-height: 0.75;
   letter-spacing: 0.04em;
-  background-color: var(--first-logo-color);
+  background-color: var(--button-text-portfolio);
   color: var(--hero-text-color);
   display: block;
   margin: 64px auto 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 16px 32px;
-}
-.hero-button-item:hover {
-  background-color: var(--background);
-  color: var(--button-hover-focus);
+  border: none;
+
 }
 
-.hero-button-item:hover {
-  background-color: var(--background);
-  color: var(--button-hover-focus);
+.hero-button-item:hover, :focus {
+  background-color: var(--button-hover-focus);
+  color: var(--hero-text-color);
 }
 
 /*блок Наши цілі*/
 
 .content {
-  margin-top: 120px;
-}
+  padding-top: 120px;
+  }
+
 .content-list {
   display: flex;
-}
-.content-block {
-  margin-right: 24px;
+  justify-content: space-between;
 }
 
-.content-block: .last-child {
-  margin-right: 0;
-}
 
 .content-title {
   font-weight: 500;
@@ -213,6 +211,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 }
+
 .content-item {
   font-size: 16px;
   line-height: 1.5e;
@@ -229,8 +228,9 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--title-text-color);
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
+
 .title-team {
   font-size: 36px;
   line-height: 1.11;
@@ -241,25 +241,34 @@ body {
   padding-bottom: 72px;
   padding-top: 120px;
 }
+
 .content-img-list {
   display: flex;
+  justify-content: space-between;
 }
 
 .team {
   background-color: var(--Light-mode-backgrounds);
   padding-bottom: 120px;
+  margin-top: 120px;
 }
 
 .team-hed-item {
   display: flex;
+  justify-content: space-between;
+  
 }
 
 .item-card {
-  margin-right: 24px;
+  margin-right: 0;
+  background-color: var(--hero-text-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
 }
 
-.item-card: .last-child {
-  margin-right: 0;
+.box {
+ padding: 32px 67px 32px 67px;
 }
 
 .team-name {
@@ -269,7 +278,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
-  padding-top: 32px;
+  margin-bottom: 8px;
 }
 
 .team-item {
@@ -277,17 +286,9 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
   text-align: center;
-  padding-bottom: 32px;
-  margin-top: 8px;
-}
-.box {
-  background: var(--hero-text-color);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
-}
+  color: var(--primary-text-color);
+  }
 
 /* меню "Фильтр" сторінка "Портфоліо" */
 
@@ -297,13 +298,10 @@ body {
 }
 .main {
   padding-top: 96px;
+  padding-bottom: 120px;
 }
-.filter .item {
+.filter .item:not(:last-child) {
   margin-right: 24px;
-}
-
-.filter .item: .last-child {
-  margin-right: 0;
 }
 
 /* кнопка сторинки Портфоліо */
@@ -330,6 +328,7 @@ body {
   background-color: var(--button-hover-focus);
   color: var(--hero-text-color);
 }
+
 .button-item:focus {
   background-color: var(--button-hover-focus);
   color: var(--hero-text-color);
@@ -340,22 +339,28 @@ body {
 .project {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 47px;
+  margin-top: 47px;
 }
+
 /* CARD */
 .project-cont {
   flex-basis: calc((100% - 76px) / 3);
 }
+
 .project-cont {
   margin: 0 19px 30px;
-  border: 1px solid var(--border-button);
+  text-decoration: none;
+  
 }
+
 .project-cont:nth-of-type(3n + 1) {
   margin-left: 0;
 }
+
 .project-cont:nth-of-type(3n) {
   margin-right: 0;
 }
+
 .project-cont:nth-last-of-type(-n + 3) {
   margin-bottom: 0;
 }
@@ -370,25 +375,31 @@ body {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   text-transform: capitalize;
-  padding-top: 32px;
-}
+  margin-bottom: 8px;
+  }
+
 .project-item {
   font-size: 16px;
   line-height: 0.75;
-  color: var(--primary-text-color);
   text-transform: capitalize;
-  margin-bottom: 32px;
-  padding-top: 8px;
-}
+  color: var(--primary-text-color);
+ }
+
 .after-img {
-  padding: 0 0 0 16px;
+  padding: 32px 54px 32px 16px;
+  border-left: 1px solid var(--border-button);
+  border-right: 1px solid var(--border-button);
+  border-bottom: 1px solid var(--border-button);
+  }
+
+.project-link {
+  text-decoration: none;
 }
 
 /* FOOTER */
 .footer {
   background: var(--hero-backround);
-  display: flex;
-  flex-direction: column;
+  padding: 100px 0;
 }
 
 .footer-item {
@@ -396,8 +407,9 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--footer-text-color);
-  padding: 16px 830px 100px 0;
-}
+  width: 264px;
+  margin-top: 16px;
+  }
 
 .footer-logo {
   font-family: "Raleway";
@@ -410,6 +422,7 @@ body {
   text-decoration: none;
   margin-top: 100px;
 }
+
 .web {
   color: var(--first-logo-color);
 }
