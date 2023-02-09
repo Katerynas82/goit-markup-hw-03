@@ -116,6 +116,9 @@ body {
 .link-nav:is(:hover, :focus) {
   color: var(--button-hover-focus);
 }
+.link-nav.current {
+  color: var(--button-hover-focus);
+  }
 
 .item {
   font-weight: 500;
